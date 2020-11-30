@@ -6,5 +6,5 @@ Navigate to the Facebook page (https://www.facebook.com) X
 Navigate back to the QA Tech Hub website. X
 Print the URL of the current page. X
 Navigate forward.X
-Reload the page.
-Close the Browser.
+Reload the page. X
+Close the Browser. X
