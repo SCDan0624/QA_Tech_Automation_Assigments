@@ -29,11 +29,20 @@ create_account_element.click()
 #  “Re-enter mobile number”, new password.
 
 
+"""
 # ID changes after every refresh, find by ID will not work here.
 
-"""
+possble solutions:
 
+Use the contains example:
+driver.findElement(By.xpath("//*[contains(@id,'title')]"))
 
+or
+
+WebElement element = driver.getElement(By.cssSelector("id:contains('title')"));
+
+Use starts with example:
+driver.findElement(By.xpath("//* [start-with(@id,'title')]"))
 
 
 
