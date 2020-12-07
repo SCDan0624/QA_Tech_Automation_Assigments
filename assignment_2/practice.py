@@ -17,23 +17,26 @@ print("URL confirmed")
 
 # Verify that there is a “Create an account” section on the page.
 create_account_css_locator = "a[id='u_0_2']"
+# create_account_css_locator = "a#u_0_2" Also works here
 create_account_element = driver.find_element_by_css_selector(
     create_account_css_locator)
 assert create_account_element.text == 'Create New Account'
 print("Create an account section confirmed")
 create_account_element.click()
 
+
 # Fill in the text boxes: First Name, Last Name, Mobile Number or email address,
 #  “Re-enter mobile number”, new password.
 
+
+# ID changes after every refresh, find by ID will not work here.
+
 """
-first_name_css_locator
-first_name_css_element
 
-last_name_css_locator
-last_name_css_element
 
-phone_number_css_locator
-phone_number_css_element
+
+
+
+
 
 """
