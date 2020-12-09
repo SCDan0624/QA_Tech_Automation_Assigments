@@ -28,6 +28,6 @@ create_account_element.click()
 # Fill in the text boxes: First Name, Last Name, Mobile Number or email address,
 #  “Re-enter mobile number”, new password.
 
-# first_name_xpath = "//input[starts-with(@id, 'u_')]"
-# first_name_element = driver.find_element_by_xpath(first_name_xpath)
-# print(first_name_element)
+first_name_xpath = "//input[starts-with(@id, 'u_') and contains(@id, '_b')]"
+first_name_element = driver.find_element_by_xpath(first_name_xpath)
+print(first_name_element)
