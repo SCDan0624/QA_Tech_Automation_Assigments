@@ -2,6 +2,10 @@ class QATechPage:
 
     def __init__(self, driver):
         self.driver = driver
+        self.url = 'http://qatechhub.com'
+
+    def go(self):
+        self.driver.get(self.url)
 
     def type_into_input(self, text):
         inpt = self.driver.find_element_by_id('search-field')
@@ -18,3 +22,5 @@ class QATechPage:
         button = self.driver.find_element_by_id('search-button')
         button.click()
         return None
+
+# Test Here
