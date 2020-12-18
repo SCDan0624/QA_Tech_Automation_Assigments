@@ -1,3 +1,6 @@
+from selenium import webdriver
+
+
 class QATechPage:
 
     def __init__(self, driver):
@@ -9,7 +12,7 @@ class QATechPage:
 
     def type_into_input(self, text):
         inpt = self.driver.find_element_by_id('search-field')
-        print(inpt)
+        inpt.clear()
         inpt.send_keys(text)
         return None
 
@@ -24,3 +27,12 @@ class QATechPage:
         return None
 
 # Test Here
+
+
+# Open the Firefox browser
+driver = webdriver.Chrome()
+
+qa_page = QATechPage(driver)
+qa_page.go()
+qa_page.type_into_input('it worked!')
+print(qa_page.get_input_text())
