@@ -26,14 +26,16 @@ class QATechPage:
         button.click()
         return None
 
-# Test Here
+# Test Setup
 
 
-# Open the Firefox browser
-driver = webdriver.Chrome()
+driver = webdriver.Chrome()  # Open the Firefox browser
 test_value = 'it worked'
+
+# Test
 qa_page = QATechPage(driver)
 qa_page.go()
 qa_page.type_into_input(test_value)
 qa_page.search_button()
 txt_from_input = qa_page.get_input_text()
+assert txt_from_input == = test_value
