@@ -17,7 +17,7 @@ class QATechPage:
         return None
 
     def get_input_text(self):
-        inpt = self.driver.find_element_by_id('seach-field')
+        inpt = self.driver.find_element_by_id('search-field')
         elem_text = inpt.get_attribute('value')
         return elem_text
 
@@ -36,6 +36,6 @@ test_value = 'it worked'
 qa_page = QATechPage(driver)
 qa_page.go()
 qa_page.type_into_input(test_value)
-qa_page.search_button()
+# qa_page.search_button()
 txt_from_input = qa_page.get_input_text()
 assert txt_from_input == test_value
