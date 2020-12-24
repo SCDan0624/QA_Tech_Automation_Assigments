@@ -38,4 +38,5 @@ qa_page.go()
 qa_page.type_into_input(test_value)
 # qa_page.search_button()
 txt_from_input = qa_page.get_input_text()
-assert txt_from_input == test_value
+assert txt_from_input == test_value, "Test Failed"
+print("Test passed")
