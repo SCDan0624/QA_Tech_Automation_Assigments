@@ -17,6 +17,7 @@ print("URL confirmed")
 
 # Verify that there is a “Create an account” section on the page.
 create_account_css_locator = "a[id='u_0_2']"
+
 # create_account_css_locator = "a#u_0_2" Also works here
 create_account_element = driver.find_element_by_css_selector(
     create_account_css_locator)
@@ -27,7 +28,6 @@ create_account_element.click()
 
 # Fill in the text boxes: First Name, Last Name, Mobile Number or email address,
 #  “Re-enter mobile number”, new password.
-
 first_name_xpath = "//input[starts-with(@id, 'u_') and contains(@id, '_b')]"
 first_name_element = driver.find_element_by_xpath(first_name_xpath)
 print(first_name_element)
